@@ -1,0 +1,56 @@
+{
+    "bridge": {
+        "name": "SjtekKit",
+        "username": "CC:22:3D:E3:CE:30",
+        "port": 51826,
+        "pin": "133-70-420"
+    },
+
+    "description": "SjtekKit",
+
+    "accessories": [
+       {
+           "accessory": "SimpleHttpSwitch",
+           "name": "lights",
+           "url": "https://sjtek.nl/api/lights/toggle",
+           "default_state_off": true,
+           "sendimmediately": "",
+           "http_method": "GET"
+       },
+       {
+           "accessory": "SimpleHttpSwitch",
+           "name": "Living room lights",
+           "url": "https://sjtek.nl/api/lights/toggle1on",
+           "default_state_off": true,
+           "sendimmediately": "",
+           "http_method": "GET"
+       },
+       {
+           "accessory": "SimpleHttpSwitch",
+           "name": "Kitchen lights",
+           "url": "https://sjtek.nl/api/lights/toggle2on",
+           "default_state_off": true,
+           "sendimmediately": "",
+           "http_method": "GET"
+       },
+       {
+           "accessory": "SimpleHttpSwitch",
+           "name": "Play music",
+           "url": "https://sjtek.nl/api/music/play",
+           "default_state_off": true,
+           "sendimmediately": "",
+           "http_method": "GET"
+       },
+       {
+           "accessory": "SimpleHttpSwitch",
+           "name": "Pause music",
+           "url": "https://sjtek.nl/api/music/pause",
+           "default_state_off": true,
+           "sendimmediately": "",
+           "http_method": "GET"
+       }
+     ],
+
+    "platforms": [
+    ]
+}
