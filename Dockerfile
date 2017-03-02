@@ -4,9 +4,14 @@ MAINTAINER Tijn Renders <tijnrenders@gmail.com>
 EXPOSE 51826
 WORKDIR /src
 
-RUN apt-get update && apt-get install -y libavahi-compat-libdnssd-dev
+RUN apt-get update \
+    && apt-get install -y libnss-mdns avahi-discover libavahi-compat-libdnssd-dev libkrb5-dev avahi-daemon libnss-mdns
+
+ADD avahi-daemon.conf /etc/avahi/avahi-daemon.conf
+ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh && mkdir -p /var/run/dbus
 
 RUN cd /src && npm install -g homebridge && npm install -g homebridge-http-simple-switch
 ADD config.json /root/.homebridge/
 
-CMD ["homebridge"]
+ENTRYPOINT ["/entrypoint.sh"]
