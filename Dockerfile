@@ -4,6 +4,8 @@ MAINTAINER Tijn Renders <tijnrenders@gmail.com>
 EXPOSE 51826
 WORKDIR /src
 
+RUN apt-get update && apt-get install -y libavahi-compat-libdnssd-dev
+
 RUN cd /src && npm install -g homebridge && npm install -g homebridge-http-simple-switch
 ADD config.json /root/.homebridge/
 
