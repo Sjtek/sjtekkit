@@ -1,56 +1,103 @@
 {
+    "accessories": [
+        {
+            "accessory": "HTTP-RGB",
+            "color": {
+                "status": "https://sjtek.nl/api/lights/livingroom/color",
+                "url": "https://sjtek.nl/api/lights/livingroom/on?hex=%s"
+            },
+            "name": "Livingroom",
+            "switch": {
+                "powerOff": "https://sjtek.nl/api/lights/livingroom/off",
+                "powerOn": "https://sjtek.nl/api/lights/livingroom/on",
+                "status": "https://sjtek.nl/api/lights/livingroom/status"
+            }
+        },
+        {
+            "accessory": "HTTP-RGB",
+            "name": "Couch",
+            "switch": {
+                "powerOff": "https://sjtek.nl/api/lights/couch/off",
+                "powerOn": "https://sjtek.nl/api/lights/couch/on",
+                "status": "https://sjtek.nl/api/lights/couch/status"
+            }
+        },
+        {
+            "accessory": "SimpleHttpSwitch",
+            "default_state_off": true,
+            "http_method": "GET",
+            "name": "Music",
+            "sendimmediately": "",
+            "url": "https://sjtek.nl/api/music/toggle"
+        },
+        {
+            "accessory": "HTTP-RGB",
+            "name": "Kitchen",
+            "switch": {
+                "powerOff": "https://sjtek.nl/api/lights/kitchen/off",
+                "powerOn": "https://sjtek.nl/api/lights/kitchen/on",
+                "status": "https://sjtek.nl/api/lights/kitchen/status"
+            }
+        },
+        {
+            "accessory": "HTTP-RGB",
+            "color": {
+                "status": "https://sjtek.nl/api/lights/hallway/color",
+                "url": "https://sjtek.nl/api/lights/hallway/on?hex=%s"
+            },
+            "name": "Hallway",
+            "switch": {
+                "powerOff": "https://sjtek.nl/api/lights/hallway/off",
+                "powerOn": "https://sjtek.nl/api/lights/hallway/on",
+                "status": "https://sjtek.nl/api/lights/hallway/status"
+            }
+        },
+        {
+            "accessory": "HTTP-RGB",
+            "color": {
+                "status": "https://sjtek.nl/api/lights/dishwasher/color",
+                "url": "https://sjtek.nl/api/lights/dishwasher/on?hex=%s"
+            },
+            "name": "Dishwasher",
+            "switch": {
+                "powerOff": "https://sjtek.nl/api/lights/dishwasher/off",
+                "powerOn": "https://sjtek.nl/api/lights/dishwasher/on",
+                "status": "https://sjtek.nl/api/lights/dishwasher/status"
+            }
+        },
+        {
+            "accessory": "HTTP-RGB",
+            "color": {
+                "status": "https://sjtek.nl/api/lights/stairs/color",
+                "url": "https://sjtek.nl/api/lights/stairs/on?hex=%s"
+            },
+            "name": "Stairs",
+            "switch": {
+                "powerOff": "https://sjtek.nl/api/lights/stairs/off",
+                "powerOn": "https://sjtek.nl/api/lights/stairs/on",
+                "status": "https://sjtek.nl/api/lights/stairs/status"
+            }
+        },
+        {
+            "accessory": "HTTP-RGB",
+            "color": {
+                "status": "https://sjtek.nl/api/lights/9/color",
+                "url": "https://sjtek.nl/api/lights/9/on?hex=%s"
+            },
+            "name": "Office",
+            "switch": {
+                "powerOff": "https://sjtek.nl/api/lights/9/off",
+                "powerOn": "https://sjtek.nl/api/lights/9/on",
+                "status": "https://sjtek.nl/api/lights/9/status"
+            }
+        }
+    ],
     "bridge": {
         "name": "SjtekKit",
-        "username": "CC:22:3D:E3:CE:30",
+        "pin": "133-70-420",
         "port": 51826,
-        "pin": "133-70-420"
+        "username": "CC:22:3D:E3:CE:30"
     },
-
     "description": "SjtekKit",
-
-    "accessories": [
-       {
-           "accessory": "SimpleHttpSwitch",
-           "name": "lights",
-           "url": "https://sjtek.nl/api/lights/toggle",
-           "default_state_off": true,
-           "sendimmediately": "",
-           "http_method": "GET"
-       },
-       {
-           "accessory": "SimpleHttpSwitch",
-           "name": "Living room lights",
-           "url": "https://sjtek.nl/api/lights/toggle1on",
-           "default_state_off": true,
-           "sendimmediately": "",
-           "http_method": "GET"
-       },
-       {
-           "accessory": "SimpleHttpSwitch",
-           "name": "Kitchen lights",
-           "url": "https://sjtek.nl/api/lights/toggle2on",
-           "default_state_off": true,
-           "sendimmediately": "",
-           "http_method": "GET"
-       },
-       {
-           "accessory": "SimpleHttpSwitch",
-           "name": "Play music",
-           "url": "https://sjtek.nl/api/music/play",
-           "default_state_off": true,
-           "sendimmediately": "",
-           "http_method": "GET"
-       },
-       {
-           "accessory": "SimpleHttpSwitch",
-           "name": "Pause music",
-           "url": "https://sjtek.nl/api/music/pause",
-           "default_state_off": true,
-           "sendimmediately": "",
-           "http_method": "GET"
-       }
-     ],
-
-    "platforms": [
-    ]
+    "platforms": []
 }

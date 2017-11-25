@@ -11,7 +11,10 @@ ADD avahi-daemon.conf /etc/avahi/avahi-daemon.conf
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh && mkdir -p /var/run/dbus
 
-RUN cd /src && npm install -g homebridge && npm install -g homebridge-http-simple-switch
+RUN cd /src && \
+    npm install -g homebridge --unsafe-perm && \
+    npm install -g homebridge-http-simple-switch --unsafe-perm && \
+    npm install -g homebridge-better-http-rgb --unsafe-perm
 ADD config.json /root/.homebridge/
 
 ENTRYPOINT ["/entrypoint.sh"]
